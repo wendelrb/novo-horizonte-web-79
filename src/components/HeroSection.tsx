@@ -1,6 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MessageSquare } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 import heroImage from "@/assets/hero-mountains.jpg";
+
+const scrollToSection = (sectionId: string) => {
+  const element = document.querySelector(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 
 export const HeroSection = () => {
   return (
@@ -13,13 +20,6 @@ export const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-transparent"></div>
       </div>
 
-      {/* Phone Fixed Button - Hidden on mobile, replaced by navigation */}
-      <div className="hidden sm:block fixed top-6 right-6 z-40">
-        <Button variant="secondary" size="lg" className="animate-fade-in">
-          <Phone className="w-5 h-5" />
-          <span className="hidden lg:inline">(51) 3333-4444</span>
-        </Button>
-      </div>
 
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -57,11 +57,21 @@ export const HeroSection = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-            <Button variant="hero" size="lg" className="min-w-[220px] text-lg py-4 px-8 hover-lift focus-ring">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="min-w-[220px] text-lg py-4 px-8 hover-lift focus-ring"
+              onClick={() => scrollToSection('#contact')}
+            >
               <MessageSquare className="w-6 h-6" />
               Preciso de ajuda
             </Button>
-            <Button variant="soft" size="lg" className="min-w-[220px] text-lg py-4 px-8 hover-lift focus-ring">
+            <Button 
+              variant="soft" 
+              size="lg" 
+              className="min-w-[220px] text-lg py-4 px-8 hover-lift focus-ring"
+              onClick={() => scrollToSection('#about')}
+            >
               Saiba mais sobre nós
             </Button>
           </div>

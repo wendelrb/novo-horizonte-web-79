@@ -71,15 +71,15 @@ export const Navigation = () => {
               ))}
             </div>
 
-            {/* Phone Button & Mobile Menu Toggle */}
+            {/* Mobile Menu Toggle */}
             <div className="flex items-center gap-3">
               <Button
                 variant={isScrolled ? "default" : "secondary"}
                 size="sm"
                 className="hidden sm:flex"
               >
-                <Phone className="w-4 h-4" />
                 <span className="hidden md:inline">(51) 3333-4444</span>
+                <span className="md:hidden">Ligar</span>
               </Button>
 
               {/* Mobile Menu Button */}
@@ -114,7 +114,6 @@ export const Navigation = () => {
               ))}
               <div className="pt-2 border-t border-border/20">
                 <Button variant="default" size="sm" className="w-full">
-                  <Phone className="w-4 h-4" />
                   Ligar (51) 3333-4444
                 </Button>
               </div>

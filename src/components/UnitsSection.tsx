@@ -210,8 +210,8 @@ export const UnitsSection = () => {
             </div>
           </div>
 
-        {/* Active Unit Display */}
-        <div className="animate-fade-in">
+          {/* Active Unit Display */}
+          <div className="animate-fade-in" key={activeUnit}>
           <Card className="bg-gradient-card border-0 shadow-hero overflow-hidden rounded-3xl">{/*bg-white*/}
             <CardContent className="p-0">
               <div className="grid lg:grid-cols-2 gap-0">
@@ -285,34 +285,34 @@ export const UnitsSection = () => {
         </div>
 
         {/* Quick Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20">
-          <div className="group text-center bg-card rounded-3xl p-10 shadow-soft hover:shadow-card transition-all duration-500 hover-lift border border-border/50">
-            <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary-hover rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-soft">
-              <Bed className="w-10 h-10 text-white" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-20">
+          <div className="group text-center bg-card rounded-2xl md:rounded-3xl p-6 md:p-10 shadow-soft hover:shadow-card transition-all duration-500 hover-lift border border-border/50">
+            <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary to-primary-hover rounded-2xl md:rounded-3xl flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-soft">
+              <Bed className="w-8 h-8 md:w-10 md:h-10 text-white" />
             </div>
-            <div className="font-display text-4xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">150+</div>
-            <p className="text-muted-foreground font-medium text-lg">Acomodações</p>
+            <div className="font-display text-2xl md:text-4xl font-bold text-foreground mb-2 md:mb-3 group-hover:text-primary transition-colors duration-300">150+</div>
+            <p className="text-muted-foreground font-medium text-sm md:text-lg">Acomodações</p>
           </div>
-          <div className="group text-center bg-card rounded-3xl p-10 shadow-soft hover:shadow-card transition-all duration-500 hover-lift border border-border/50">
-            <div className="w-20 h-20 bg-gradient-to-br from-secondary to-secondary-hover rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-soft">
-              <Activity className="w-10 h-10 text-white" />
+          <div className="group text-center bg-card rounded-2xl md:rounded-3xl p-6 md:p-10 shadow-soft hover:shadow-card transition-all duration-500 hover-lift border border-border/50">
+            <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-secondary to-secondary-hover rounded-2xl md:rounded-3xl flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-soft">
+              <Activity className="w-8 h-8 md:w-10 md:h-10 text-white" />
             </div>
-            <div className="font-display text-4xl font-bold text-foreground mb-3 group-hover:text-secondary transition-colors duration-300">24/7</div>
-            <p className="text-muted-foreground font-medium text-lg">Atendimento</p>
+            <div className="font-display text-2xl md:text-4xl font-bold text-foreground mb-2 md:mb-3 group-hover:text-secondary transition-colors duration-300">24/7</div>
+            <p className="text-muted-foreground font-medium text-sm md:text-lg">Atendimento</p>
           </div>
-          <div className="group text-center bg-card rounded-3xl p-10 shadow-soft hover:shadow-card transition-all duration-500 hover-lift border border-border/50">
-            <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-soft">
-              <Heart className="w-10 h-10 text-white" />
+          <div className="group text-center bg-card rounded-2xl md:rounded-3xl p-6 md:p-10 shadow-soft hover:shadow-card transition-all duration-500 hover-lift border border-border/50">
+            <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl md:rounded-3xl flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-soft">
+              <Heart className="w-8 h-8 md:w-10 md:h-10 text-white" />
             </div>
-            <div className="font-display text-4xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">100%</div>
-            <p className="text-muted-foreground font-medium text-lg">Humanizado</p>
+            <div className="font-display text-2xl md:text-4xl font-bold text-foreground mb-2 md:mb-3 group-hover:text-primary transition-colors duration-300">100%</div>
+            <p className="text-muted-foreground font-medium text-sm md:text-lg">Humanizado</p>
           </div>
-          <div className="group text-center bg-card rounded-3xl p-10 shadow-soft hover:shadow-card transition-all duration-500 hover-lift border border-border/50">
-            <div className="w-20 h-20 bg-gradient-to-br from-secondary to-primary rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-soft">
-              <MapPin className="w-10 h-10 text-white" />
+          <div className="group text-center bg-card rounded-2xl md:rounded-3xl p-6 md:p-10 shadow-soft hover:shadow-card transition-all duration-500 hover-lift border border-border/50">
+            <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-secondary to-primary rounded-2xl md:rounded-3xl flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-soft">
+              <MapPin className="w-8 h-8 md:w-10 md:h-10 text-white" />
             </div>
-            <div className="font-display text-4xl font-bold text-foreground mb-3 group-hover:text-secondary transition-colors duration-300">5</div>
-            <p className="text-muted-foreground font-medium text-lg">Unidades</p>
+            <div className="font-display text-2xl md:text-4xl font-bold text-foreground mb-2 md:mb-3 group-hover:text-secondary transition-colors duration-300">5</div>
+            <p className="text-muted-foreground font-medium text-sm md:text-lg">Unidades</p>
           </div>
         </div>
       </div>

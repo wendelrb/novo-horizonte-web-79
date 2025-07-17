@@ -116,16 +116,16 @@ export const AboutSection = () => {
           {highlights.map((highlight, index) => (
             <div 
               key={index}
-              className="text-center bg-card rounded-2xl p-8 shadow-soft hover:shadow-card transition-all duration-500 hover-lift group border border-border/50"
+              className="text-center bg-card rounded-2xl p-6 md:p-8 shadow-soft hover:shadow-card transition-all duration-500 hover-lift group border border-border/50"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="w-20 h-20 bg-gradient-hero rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-soft group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                <highlight.icon className="w-10 h-10 text-white" />
+              <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-hero rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6 shadow-soft group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                <highlight.icon className="w-8 h-8 md:w-10 md:h-10 text-white" />
               </div>
-              <h4 className="font-display text-xl font-semibold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
+              <h4 className="font-display text-lg md:text-xl font-semibold text-foreground mb-3 md:mb-4 group-hover:text-primary transition-colors duration-300">
                 {highlight.title}
               </h4>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                 {highlight.description}
               </p>
             </div>
