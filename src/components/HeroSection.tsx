@@ -68,15 +68,6 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
-        <div className="flex flex-col items-center group cursor-pointer">
-          <span className="text-sm mb-3 font-medium tracking-wide group-hover:text-white/80 transition-colors">Role para descobrir</span>
-          <div className="w-7 h-12 border-2 border-white/30 rounded-full flex justify-center group-hover:border-white/50 transition-colors">
-            <div className="w-1.5 h-4 bg-white/60 rounded-full mt-2 animate-float"></div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };

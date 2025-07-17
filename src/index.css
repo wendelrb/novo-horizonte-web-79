@@ -30,6 +30,10 @@ All colors MUST be HSL.
     --secondary-soft: 140 55% 90%;
     --secondary-hover: 140 55% 60%;
 
+    /* WhatsApp green for communication */
+    --whatsapp: 142 70% 49%;
+    --whatsapp-hover: 142 70% 44%;
+
     /* Muted: Light gray for subtle elements */
     --muted: 210 20% 96%;
     --muted-foreground: 215 15% 50%;

@@ -41,8 +41,8 @@ export const AboutSection = () => {
 
         {/* Mission, Approach, Differentials */}
         <div className="grid lg:grid-cols-3 gap-10 mb-24">
-          <div className="group relative bg-gradient-card rounded-3xl p-10 shadow-card hover:shadow-hero transition-all duration-700 hover-lift border border-primary/10 overflow-hidden">
-            <div className="absolute -top-6 left-10">
+          <div className="group relative bg-gradient-card rounded-3xl p-8 md:p-10 shadow-card hover:shadow-hero transition-all duration-700 hover-lift border border-primary/10 overflow-hidden">
+            <div className="absolute -top-6 left-8 md:left-10">
               <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-hover rounded-2xl flex items-center justify-center shadow-card group-hover:rotate-12 transition-transform duration-500">
                 <div className="w-4 h-4 bg-white rounded-full"></div>
               </div>
@@ -54,8 +54,8 @@ export const AboutSection = () => {
             </div>
             
             <div className="relative">
-              <h3 className="font-display text-2xl font-bold text-primary mb-6 mt-6">Nossa Missão</h3>
-              <p className="text-muted-foreground leading-relaxed text-lg">
+              <h3 className="font-display text-xl md:text-2xl font-bold text-primary mb-4 md:mb-6 mt-6">Nossa Missão</h3>
+              <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
                 Proporcionar um ambiente acolhedor e seguro para a recuperação de pessoas com dependência química, 
                 oferecendo tratamento humanizado e eficaz que promova a reintegração social e familiar.
               </p>
@@ -64,8 +64,8 @@ export const AboutSection = () => {
             <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 rounded-b-3xl"></div>
           </div>
           
-          <div className="group relative bg-gradient-card rounded-3xl p-10 shadow-card hover:shadow-hero transition-all duration-700 hover-lift border border-secondary/10 overflow-hidden lg:translate-y-6">
-            <div className="absolute -top-6 left-10">
+          <div className="group relative bg-gradient-card rounded-3xl p-8 md:p-10 shadow-card hover:shadow-hero transition-all duration-700 hover-lift border border-secondary/10 overflow-hidden lg:translate-y-6">
+            <div className="absolute -top-6 left-8 md:left-10">
               <div className="w-12 h-12 bg-gradient-to-br from-secondary to-secondary-hover rounded-2xl flex items-center justify-center shadow-card group-hover:rotate-12 transition-transform duration-500">
                 <div className="w-4 h-4 bg-white rounded-full"></div>
               </div>
@@ -77,8 +77,8 @@ export const AboutSection = () => {
             </div>
             
             <div className="relative">
-              <h3 className="font-display text-2xl font-bold text-secondary mb-6 mt-6">Nossa Abordagem</h3>
-              <p className="text-muted-foreground leading-relaxed text-lg">
+              <h3 className="font-display text-xl md:text-2xl font-bold text-secondary mb-4 md:mb-6 mt-6">Nossa Abordagem</h3>
+              <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
                 Tratamento personalizado com equipe multidisciplinar, combinando terapias individuais e em grupo, 
                 atividades terapêuticas e acompanhamento médico especializado para cada fase da recuperação.
               </p>
@@ -87,8 +87,8 @@ export const AboutSection = () => {
             <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-secondary to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 rounded-b-3xl"></div>
           </div>
           
-          <div className="group relative bg-gradient-card rounded-3xl p-10 shadow-card hover:shadow-hero transition-all duration-700 hover-lift border border-primary/10 overflow-hidden">
-            <div className="absolute -top-6 left-10">
+          <div className="group relative bg-gradient-card rounded-3xl p-8 md:p-10 shadow-card hover:shadow-hero transition-all duration-700 hover-lift border border-primary/10 overflow-hidden">
+            <div className="absolute -top-6 left-8 md:left-10">
               <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center shadow-card group-hover:rotate-12 transition-transform duration-500">
                 <div className="w-4 h-4 bg-white rounded-full"></div>
               </div>
@@ -100,8 +100,8 @@ export const AboutSection = () => {
             </div>
             
             <div className="relative">
-              <h3 className="font-display text-2xl font-bold text-primary mb-6 mt-6">Nossos Diferenciais</h3>
-              <p className="text-muted-foreground leading-relaxed text-lg">
+              <h3 className="font-display text-xl md:text-2xl font-bold text-primary mb-4 md:mb-6 mt-6">Nossos Diferenciais</h3>
+              <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
                 Infraestrutura completa, localização estratégica, programa de reinserção social 
                 e acompanhamento familiar contínuo para garantir resultados duradouros.
               </p>

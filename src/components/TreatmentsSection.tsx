@@ -107,9 +107,9 @@ export const TreatmentsSection = () => {
                 
                 <Button 
                   variant={treatment.color === 'primary' ? 'default' : 'secondary'} 
-                  className="w-full py-3 text-lg hover-lift focus-ring"
+                  className="w-full py-3 text-base md:text-lg hover-lift focus-ring whitespace-normal h-auto min-h-[44px]"
                 >
-                  Saiba mais sobre {treatment.title.toLowerCase()}
+                  <span className="text-center">Saiba mais sobre {treatment.title.toLowerCase()}</span>
                 </Button>
               </CardContent>
             </Card>
