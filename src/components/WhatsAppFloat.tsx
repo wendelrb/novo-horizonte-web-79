@@ -24,7 +24,7 @@ export const WhatsAppFloat = () => {
   const handleWhatsAppClick = () => {
     const phoneNumber = "5511999999999"; // Replace with actual clinic number
     const message = "Olá! Gostaria de saber mais sobre os tratamentos da Clínica Novo Horizonte.";
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
