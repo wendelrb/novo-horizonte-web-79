@@ -101,8 +101,8 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white/98 backdrop-blur-lg border-t border-border/20 shadow-lg animate-fade-in">
-            <div className="px-4 py-6 space-y-1 max-h-screen overflow-y-auto">
+          <div className="lg:hidden bg-white border-t border-border/20 shadow-lg animate-fade-in">
+            <div className="px-4 py-6 space-y-1">
               {navItems.map((item, index) => (
                 <button
                   key={item.label}
