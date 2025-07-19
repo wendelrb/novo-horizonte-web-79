@@ -7,6 +7,11 @@ import { MapPin, Phone, Bed, Activity, Heart, Users, Star, Wifi, Car, Coffee, Du
 export const UnitsSection = () => {
   const [activeUnit, setActiveUnit] = useState(0);
 
+  const handleUnitChange = (index: number) => {
+    console.log('Changing to unit:', index);
+    setActiveUnit(index);
+  };
+
   const units = [
     {
       name: "Porto Alegre Central",
@@ -187,18 +192,14 @@ export const UnitsSection = () => {
 
         {/* Desktop Tab Navigation */}
         <div className="hidden lg:block">
-          <div className="relative mb-12">
-            <div className="absolute inset-0 flex justify-center">
-              <div className="w-full max-w-4xl h-16 bg-gradient-soft rounded-2xl -z-10"></div>
-            </div>
-            
-            <div className="flex flex-wrap justify-center gap-3">
+          <div className="mb-12">            
+            <div className="flex flex-wrap justify-center gap-4 bg-gradient-soft rounded-2xl p-4">
               {units.map((unit, index) => (
                 <Button
                   key={index}
                   variant={activeUnit === index ? "default" : "outline"}
-                  onClick={() => setActiveUnit(index)}
-                  className={`text-sm font-medium transition-all duration-300 ${
+                  onClick={() => handleUnitChange(index)}
+                  className={`text-sm font-medium transition-all duration-300 cursor-pointer ${
                     activeUnit === index 
                       ? "shadow-card transform scale-105" 
                       : "hover:shadow-soft hover:scale-102"
