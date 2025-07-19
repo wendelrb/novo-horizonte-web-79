@@ -99,28 +99,51 @@ export const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Full Screen */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-border/20 shadow-lg animate-fade-in">
-            <div className="px-4 py-6 space-y-1">
+          <div className="lg:hidden fixed inset-0 z-50 bg-background animate-fade-in">
+            {/* Header with close button */}
+            <div className="flex items-center justify-between p-6 border-b border-border/20">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-gradient-hero rounded-xl flex items-center justify-center shadow-soft">
+                  <div className="w-5 h-5 bg-white rounded-lg"></div>
+                </div>
+                <h1 className="text-xl font-bold text-foreground">
+                  <span className="text-primary">Novo</span> Horizonte
+                </h1>
+              </div>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-foreground"
+              >
+                <X className="w-6 h-6" />
+              </Button>
+            </div>
+
+            {/* Menu Content */}
+            <div className="flex flex-col h-full justify-center px-8 py-12 space-y-2">
               {navItems.map((item, index) => (
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-6 py-4 rounded-xl font-medium text-foreground hover:bg-primary/10 hover:text-primary transition-all duration-300 text-lg border border-transparent hover:border-primary/20"
+                  className="block w-full text-center px-8 py-6 rounded-2xl font-semibold text-foreground hover:bg-primary/10 hover:text-primary transition-all duration-300 text-2xl border border-transparent hover:border-primary/20 hover-lift"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {item.label}
                 </button>
               ))}
-              <div className="pt-4 mt-4 border-t border-border/20">
+              
+              {/* Call Button */}
+              <div className="pt-8 mt-8">
                 <Button 
                   variant="default" 
                   size="lg" 
-                  className="w-full py-4 text-lg font-medium hover-lift"
+                  className="w-full py-6 text-xl font-semibold hover-lift rounded-2xl"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-6 h-6 mr-3" />
                   Ligar (51) 3333-4444
                 </Button>
               </div>
