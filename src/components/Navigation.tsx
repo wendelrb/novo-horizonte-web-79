@@ -101,19 +101,26 @@ export const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white/95 backdrop-blur-lg border-t border-border/20">
-            <div className="px-4 py-4 space-y-2">
-              {navItems.map((item) => (
+          <div className="lg:hidden bg-white/98 backdrop-blur-lg border-t border-border/20 shadow-lg animate-fade-in">
+            <div className="px-4 py-6 space-y-1 max-h-screen overflow-y-auto">
+              {navItems.map((item, index) => (
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-4 py-3 rounded-lg font-medium text-foreground hover:bg-primary/10 hover:text-primary transition-colors duration-200"
+                  className="block w-full text-left px-6 py-4 rounded-xl font-medium text-foreground hover:bg-primary/10 hover:text-primary transition-all duration-300 text-lg border border-transparent hover:border-primary/20"
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {item.label}
                 </button>
               ))}
-              <div className="pt-2 border-t border-border/20">
-                <Button variant="default" size="sm" className="w-full">
+              <div className="pt-4 mt-4 border-t border-border/20">
+                <Button 
+                  variant="default" 
+                  size="lg" 
+                  className="w-full py-4 text-lg font-medium hover-lift"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <Phone className="w-5 h-5 mr-2" />
                   Ligar (51) 3333-4444
                 </Button>
               </div>
