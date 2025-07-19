@@ -118,7 +118,7 @@ export const TreatmentsSection = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-20">
-          <div className="bg-gradient-soft rounded-3xl p-12 shadow-soft hover-lift transition-all duration-500 border border-border/50 overflow-hidden relative">
+          <div className="bg-gradient-soft rounded-3xl p-6 sm:p-8 md:p-12 shadow-soft hover-lift transition-all duration-500 border border-border/50 overflow-hidden relative">
             {/* Background decoration */}
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-primary to-transparent rounded-full blur-3xl"></div>
@@ -126,14 +126,18 @@ export const TreatmentsSection = () => {
             </div>
             
             <div className="relative">
-              <h3 className="font-display text-3xl font-bold text-foreground mb-6">
+              <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4 sm:mb-6">
                 Não sabe qual tratamento é ideal?
               </h3>
-              <p className="text-muted-foreground mb-8 max-w-3xl mx-auto text-lg leading-relaxed">
+              <p className="text-muted-foreground mb-6 sm:mb-8 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed px-2">
                 Nossa equipe especializada está pronta para avaliar seu caso e recomendar 
                 o melhor plano de tratamento personalizado para suas necessidades específicas.
               </p>
-              <Button variant="hero" size="lg" className="px-10 py-4 text-lg hover-lift focus-ring">
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-base sm:text-lg hover-lift focus-ring w-full sm:w-auto whitespace-normal h-auto min-h-[48px]"
+              >
                 Fale com nossa equipe agora
               </Button>
             </div>
