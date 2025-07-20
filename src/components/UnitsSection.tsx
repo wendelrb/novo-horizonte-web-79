@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -14,103 +15,123 @@ export const UnitsSection = () => {
 
   const units = [
     {
-      name: "Porto Alegre Central",
-      subtitle: "Unidade Principal",
-      address: "Av. Ipiranga, 1234 - Centro Histórico",
-      phone: "(51) 3333-4444",
-      description: "Nossa unidade principal, localizada no coração de Porto Alegre, oferece tratamento completo com infraestrutura moderna e equipe especializada disponível 24 horas.",
-      capacity: "40 leitos",
+      name: "Unidade Pelotas Masculina",
+      subtitle: "Centro de Recuperação Masculino",
+      address: "Rua dos Girassóis, 1233 - Fragata, Pelotas",
+      phone: "(53) 3377-8888",
+      description: "Unidade especializada no atendimento masculino, com ambiente acolhedor e estrutura completa para tratamento de dependência química. Oferece espaços de convivência e atividades terapêuticas em ambiente residencial.",
+      capacity: "25 leitos",
       rating: "4.9",
-      specialties: ["Desintoxicação", "Terapia Individual", "Grupos Terapêuticos"],
+      specialties: ["Tratamento Masculino", "Terapia Individual", "Grupos Terapêuticos"],
       amenities: [
-        { icon: Bed, label: "40 acomodações individuais" },
-        { icon: Activity, label: "Centro de atividades físicas" },
+        { icon: Bed, label: "25 acomodações individuais" },
+        { icon: Activity, label: "Área de convivência externa" },
         { icon: Users, label: "Salas de terapia em grupo" },
-        { icon: Heart, label: "Atendimento médico 24h" },
+        { icon: Heart, label: "Atendimento médico especializado" },
         { icon: Trees, label: "Jardim terapêutico" },
-        { icon: Wifi, label: "Wi-Fi em todas as áreas" }
+        { icon: Coffee, label: "Espaço de refeições" }
       ],
-      image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
+      image: "/lovable-uploads/05ffcab5-9a5a-4d6e-a04c-6f1697c0cf44.png",
       featured: true
     },
     {
-      name: "Capão da Canoa",
-      subtitle: "Unidade Praia",
-      address: "Rua das Acácias, 567 - Zona Norte",
+      name: "Unidade Tramandaí",
+      subtitle: "Centro de Recuperação Litoral",
+      address: "Av. Beira Mar, 567 - Centro, Tramandaí",
       phone: "(51) 3344-5555",
-      description: "Localizada próxima à praia, oferece um ambiente tranquilo e terapêutico para a recuperação, com vista para o mar e atividades ao ar livre.",
-      capacity: "25 leitos",
-      rating: "4.8",
-      specialties: ["Terapia Natural", "Atividades Outdoor", "Meditação"],
-      amenities: [
-        { icon: Bed, label: "25 acomodações com vista" },
-        { icon: Trees, label: "Atividades ao ar livre" },
-        { icon: Heart, label: "Terapia assistida por animais" },
-        { icon: Activity, label: "Espaços de meditação" },
-        { icon: Coffee, label: "Horta terapêutica" },
-        { icon: Car, label: "Proximidade com a praia" }
-      ],
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
-      featured: false
-    },
-    {
-      name: "Canoas",
-      subtitle: "Unidade Metropolitana",
-      address: "Rua das Palmeiras, 890 - Centro",
-      phone: "(51) 3355-6666",
-      description: "Estrategicamente localizada na região metropolitana, com fácil acesso e ambiente acolhedor, ideal para quem busca tratamento próximo à capital.",
+      description: "Localizada no litoral gaúcho, oferece um ambiente tranquilo para recuperação com atividades noturnas monitoradas e espaços amplos para convivência e terapia.",
       capacity: "30 leitos",
-      rating: "4.7",
-      specialties: ["Reabilitação", "Reinserção Social", "Terapia Ocupacional"],
+      rating: "4.8",
+      specialties: ["Terapia Natural", "Atividades Noturnas", "Convivência"],
       amenities: [
         { icon: Bed, label: "30 acomodações confortáveis" },
-        { icon: Dumbbell, label: "Academia e piscina" },
-        { icon: Activity, label: "Sala de artes e música" },
-        { icon: Heart, label: "Consultórios especializados" },
-        { icon: Coffee, label: "Refeitório amplo" },
-        { icon: Trees, label: "Área verde para caminhadas" }
+        { icon: Trees, label: "Área externa ampla" },
+        { icon: Heart, label: "Monitoramento 24h" },
+        { icon: Activity, label: "Espaços de convivência" },
+        { icon: Coffee, label: "Área de refeições coletiva" },
+        { icon: Car, label: "Proximidade com a praia" }
       ],
-      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843",
+      image: "/lovable-uploads/8e5afa13-1a44-4b06-8304-7e03e657e523.png",
       featured: false
     },
     {
-      name: "Gravataí",
-      subtitle: "Unidade Norte",
-      address: "Av. Brasil, 456 - Industrial",
-      phone: "(51) 3366-7777",
-      description: "Unidade moderna com foco em atividades terapêuticas e reinserção social, equipada com oficinas profissionalizantes e espaços de convivência.",
-      capacity: "35 leitos",
-      rating: "4.6",
-      specialties: ["Oficinas Profissionalizantes", "Reinserção", "Convivência"],
-      amenities: [
-        { icon: Bed, label: "35 acomodações modernas" },
-        { icon: Activity, label: "Oficinas profissionalizantes" },
-        { icon: Users, label: "Centro de convivência" },
-        { icon: Heart, label: "Laboratório de análises" },
-        { icon: Coffee, label: "Biblioteca terapêutica" },
-        { icon: Dumbbell, label: "Campo de futebol" }
-      ],
-      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb",
-      featured: false
-    },
-    {
-      name: "Pelotas",
-      subtitle: "Unidade Sul",
-      address: "Rua dos Girassóis, 123 - Fragata",
-      phone: "(51) 3377-8888",
-      description: "Nossa mais nova unidade, equipada com tecnologia de ponta e ambiente familiar, oferecendo o que há de mais moderno em tratamento de dependência química.",
+      name: "Unidade Feminina Osório",
+      subtitle: "Centro de Recuperação Feminino",
+      address: "Rua das Palmeiras, 890 - Centro, Osório",
+      phone: "(51) 3355-6666",
+      description: "Clínica especializada no atendimento feminino com ambiente acolhedor e seguro. Oferece tratamento humanizado com foco nas necessidades específicas do público feminino.",
       capacity: "20 leitos",
-      rating: "5.0",
-      specialties: ["Tecnologia Avançada", "Ambiente Familiar", "Cuidado Premium"],
+      rating: "4.9",
+      specialties: ["Tratamento Feminino", "Terapia Especializada", "Ambiente Seguro"],
       amenities: [
-        { icon: Bed, label: "20 acomodações premium" },
-        { icon: Activity, label: "Centro de reabilitação moderno" },
-        { icon: Coffee, label: "Cozinha terapêutica" },
-        { icon: Activity, label: "Sala de cinema" },
-        { icon: Trees, label: "Jardim zen" },
-        { icon: Car, label: "Estacionamento amplo" }
+        { icon: Bed, label: "20 acomodações femininas" },
+        { icon: Heart, label: "Atendimento especializado" },
+        { icon: Activity, label: "Terapias específicas" },
+        { icon: Users, label: "Grupos de apoio feminino" },
+        { icon: Trees, label: "Jardim terapêutico" },
+        { icon: Coffee, label: "Espaço de convivência" }
       ],
-      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9",
+      image: "/lovable-uploads/b1b2a6df-7e0d-4dac-97c8-7e043e8731b4.png",
+      featured: true
+    },
+    {
+      name: "Unidade Feminina Pelotas",
+      subtitle: "Clínica Terapêutica Lótus",
+      address: "Rua das Flores, 456 - Areal, Pelotas",
+      phone: "(53) 3366-7777",
+      description: "Clínica Terapêutica Lótus, especializada no tratamento feminino com estrutura moderna e ambiente acolhedor. Oferece tratamento integral com foco na recuperação e reinserção social.",
+      capacity: "22 leitos",
+      rating: "4.8",
+      specialties: ["Tratamento Feminino", "Terapia Lótus", "Reinserção Social"],
+      amenities: [
+        { icon: Bed, label: "22 acomodações especializadas" },
+        { icon: Activity, label: "Terapias integradas" },
+        { icon: Users, label: "Grupos de apoio" },
+        { icon: Heart, label: "Atendimento psicológico" },
+        { icon: Coffee, label: "Espaço de convivência" },
+        { icon: Trees, label: "Área verde terapêutica" }
+      ],
+      image: "/lovable-uploads/20c4f196-2286-436a-9333-c5afd6308035.png",
+      featured: false
+    },
+    {
+      name: "Centro de Recuperação Litorânea",
+      subtitle: "Unidade Capão da Canoa",
+      address: "Rua das Acácias, 123 - Centro, Capão da Canoa",
+      phone: "(51) 3377-9999",
+      description: "Centro de recuperação com arquitetura colorida e acolhedora, oferecendo tratamento em ambiente próximo à natureza com fácil acesso e estrutura completa para recuperação.",
+      capacity: "28 leitos",
+      rating: "4.7",
+      specialties: ["Terapia Natural", "Ambiente Litorâneo", "Arquitetura Terapêutica"],
+      amenities: [
+        { icon: Bed, label: "28 acomodações modernas" },
+        { icon: Trees, label: "Ambiente natural" },
+        { icon: Activity, label: "Atividades ao ar livre" },
+        { icon: Heart, label: "Cuidado humanizado" },
+        { icon: Car, label: "Fácil acesso" },
+        { icon: Coffee, label: "Espaços de convivência" }
+      ],
+      image: "/lovable-uploads/2d3f3dcc-2f23-4cb3-86a8-e0290962eb36.png",
+      featured: false
+    },
+    {
+      name: "Unidade Premium Pelotas",
+      subtitle: "Centro de Excelência",
+      address: "Av. Bento Gonçalves, 789 - Centro, Pelotas",
+      phone: "(53) 3388-0000",
+      description: "Nossa unidade premium com estrutura de alto padrão, incluindo piscina terapêutica e ambiente moderno. Oferece o que há de mais avançado em tratamento de dependência química.",
+      capacity: "18 leitos",
+      rating: "5.0",
+      specialties: ["Tratamento Premium", "Piscina Terapêutica", "Estrutura Moderna"],
+      amenities: [
+        { icon: Bed, label: "18 acomodações premium" },
+        { icon: Activity, label: "Piscina terapêutica" },
+        { icon: Heart, label: "Atendimento de excelência" },
+        { icon: Dumbbell, label: "Academia completa" },
+        { icon: Trees, label: "Área de lazer" },
+        { icon: Car, label: "Estacionamento privativo" }
+      ],
+      image: "/lovable-uploads/1c5de89b-bd66-4fc8-8ff7-713b42a04a88.png",
       featured: true
     }
   ];
@@ -125,7 +146,7 @@ export const UnitsSection = () => {
           </h2>
           <div className="w-32 h-1.5 bg-gradient-hero mx-auto mb-10 rounded-full"></div>
           <p className="text-xl sm:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed text-balance">
-            Presentes em 5 cidades estratégicas do Rio Grande do Sul, oferecemos estrutura completa 
+            Presentes em 6 unidades estratégicas do Rio Grande do Sul, oferecemos estrutura completa 
             e proximidade para melhor atender você e sua família.
           </p>
         </div>
@@ -213,7 +234,7 @@ export const UnitsSection = () => {
 
           {/* Active Unit Display */}
           <div className="animate-fade-in" key={activeUnit}>
-          <Card className="bg-gradient-card border-0 shadow-hero overflow-hidden rounded-3xl">{/*bg-white*/}
+          <Card className="bg-gradient-card border-0 shadow-hero overflow-hidden rounded-3xl">
             <CardContent className="p-0">
               <div className="grid lg:grid-cols-2 gap-0">
                 {/* Image */}
@@ -291,7 +312,7 @@ export const UnitsSection = () => {
             <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary to-primary-hover rounded-2xl md:rounded-3xl flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-soft">
               <Bed className="w-8 h-8 md:w-10 md:h-10 text-white" />
             </div>
-            <div className="font-display text-2xl md:text-4xl font-bold text-foreground mb-2 md:mb-3 group-hover:text-primary transition-colors duration-300">150+</div>
+            <div className="font-display text-2xl md:text-4xl font-bold text-foreground mb-2 md:mb-3 group-hover:text-primary transition-colors duration-300">143+</div>
             <p className="text-muted-foreground font-medium text-sm md:text-lg">Acomodações</p>
           </div>
           <div className="group text-center bg-card rounded-2xl md:rounded-3xl p-6 md:p-10 shadow-soft hover:shadow-card transition-all duration-500 hover-lift border border-border/50">
@@ -312,7 +333,7 @@ export const UnitsSection = () => {
             <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-secondary to-primary rounded-2xl md:rounded-3xl flex items-center justify-center mx-auto mb-4 md:mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-soft">
               <MapPin className="w-8 h-8 md:w-10 md:h-10 text-white" />
             </div>
-            <div className="font-display text-2xl md:text-4xl font-bold text-foreground mb-2 md:mb-3 group-hover:text-secondary transition-colors duration-300">5</div>
+            <div className="font-display text-2xl md:text-4xl font-bold text-foreground mb-2 md:mb-3 group-hover:text-secondary transition-colors duration-300">6</div>
             <p className="text-muted-foreground font-medium text-sm md:text-lg">Unidades</p>
           </div>
         </div>
