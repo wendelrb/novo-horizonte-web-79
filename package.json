@@ -3,11 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://wendelrb.github.io/novo-horizonte-web-79",
+  "homepage": "https://wendelrb.github.io/novo-horizonte-web-79/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "node -e \"try { require('fs').copyFileSync('public/.nojekyll', 'dist/.nojekyll') } catch(e) { console.error(e) }\" && node fix-paths.js",
+    "postbuild": "node -e \"try { require('fs').copyFileSync('public/.nojekyll', 'dist/.nojekyll') } catch(e) { console.error(e) }\" && node fix-paths.js && node verify-assets.js",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"

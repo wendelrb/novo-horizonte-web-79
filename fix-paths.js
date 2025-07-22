@@ -15,11 +15,11 @@ fs.readFile(indexPath, 'utf8', (err, data) => {
   }
 
   // Substitui os caminhos absolutos por caminhos relativos ao base path
-  let correctedContent = data.replace(/src=\"\//g, 'src="/novo-horizonte-web-79/')
-                            .replace(/href=\"\//g, 'href="/novo-horizonte-web-79/');
+  let correctedContent = data.replace(/src="\//g, 'src="https://wendelrb.github.io/novo-horizonte-web-79/')
+                            .replace(/href="\//g, 'href="https://wendelrb.github.io/novo-horizonte-web-79/');
   
   // Corrige qualquer referência direta ao arquivo fonte main.tsx
-  correctedContent = correctedContent.replace(/src=\"(\/novo-horizonte-web-79)?\/?src\/main\.tsx\"/g, 'src="/novo-horizonte-web-79/assets/index.js"');
+  correctedContent = correctedContent.replace(/src="(https:\/\/wendelrb\.github\.io\/novo-horizonte-web-79)?\/?\/src\/main\.tsx"/g, 'src="https://wendelrb.github.io/novo-horizonte-web-79/assets/index.js"');
 
   fs.writeFile(indexPath, correctedContent, 'utf8', (err) => {
     if (err) {
