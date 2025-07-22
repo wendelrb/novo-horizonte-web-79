@@ -1,6 +1,10 @@
 // Script para corrigir os caminhos dos recursos estáticos no arquivo index.html
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const indexPath = path.join(__dirname, 'dist', 'index.html');
 
@@ -11,8 +15,11 @@ fs.readFile(indexPath, 'utf8', (err, data) => {
   }
 
   // Substitui os caminhos absolutos por caminhos relativos ao base path
-  const correctedContent = data.replace(/src=\"\//g, 'src="/novo-horizonte-web-79/')
-                              .replace(/href=\"\//g, 'href="/novo-horizonte-web-79/');
+  let correctedContent = data.replace(/src=\"\//g, 'src="/novo-horizonte-web-79/')
+                            .replace(/href=\"\//g, 'href="/novo-horizonte-web-79/');
+  
+  // Corrige qualquer referência direta ao arquivo fonte main.tsx
+  correctedContent = correctedContent.replace(/src=\"(\/novo-horizonte-web-79)?\/?src\/main\.tsx\"/g, 'src="/novo-horizonte-web-79/assets/index.js"');
 
   fs.writeFile(indexPath, correctedContent, 'utf8', (err) => {
     if (err) {
