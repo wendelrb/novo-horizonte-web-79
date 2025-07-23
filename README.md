@@ -62,7 +62,35 @@ This project is built with:
 
 ## How can I deploy this project?
 
+### Deploy via Lovable
+
 Simply open [Lovable](https://lovable.dev/projects/ae9ecd09-9289-4b1d-93f4-ebf0136d4ba5) and click on Share -> Publish.
+
+### Deploy to GitHub Pages
+
+This project is configured to deploy to GitHub Pages. The deployment is handled by GitHub Actions workflow in `.github/workflows/deploy.yml`.
+
+To deploy:
+
+1. Push your changes to the repository
+2. GitHub Actions will automatically build and deploy the site to GitHub Pages
+3. Access your site at: https://wendelrb.github.io/novo-horizonte-web-79/
+
+### Troubleshooting Image Loading Issues
+
+If images are not loading correctly on GitHub Pages, the following fixes have been implemented:
+
+1. Updated `vite.config.ts` to use the correct base URL for production
+2. Added scripts to fix image paths during build:
+   - `fix-paths.js`: Corrects paths in HTML files
+   - `fix-image-paths.js`: Corrects image paths in component files
+   - `verify-assets.js`: Verifies and fixes paths in compiled JS files
+
+To test if images are loading correctly, run:
+
+```sh
+node test-images.js
+```
 
 ## Can I connect a custom domain to my Lovable project?
 

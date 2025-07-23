@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "postbuild": "node -e \"try { require('fs').copyFileSync('public/.nojekyll', 'dist/.nojekyll') } catch(e) { console.error(e) }\" && node fix-paths.js && node verify-assets.js",
+    "postbuild": "node -e \"try { require('fs').copyFileSync('public/.nojekyll', 'dist/.nojekyll') } catch(e) { console.error(e) }\" && node fix-image-paths.js && node fix-paths.js && node verify-assets.js",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"

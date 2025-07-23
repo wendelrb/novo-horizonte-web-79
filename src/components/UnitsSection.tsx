@@ -31,7 +31,7 @@ export const UnitsSection = () => {
         { icon: Trees, label: "Jardim terapêutico" },
         { icon: Coffee, label: "Espaço de refeições" }
       ],
-      image: "/lovable-uploads/05ffcab5-9a5a-4d6e-a04c-6f1697c0cf44.png",
+      image: "https://wendelrb.github.io/novo-horizonte-web-79/lovable-uploads/05ffcab5-9a5a-4d6e-a04c-6f1697c0cf44.png",
       featured: true
     },
     {
@@ -51,7 +51,7 @@ export const UnitsSection = () => {
         { icon: Coffee, label: "Área de refeições coletiva" },
         { icon: Car, label: "Proximidade com a praia" }
       ],
-      image: "/lovable-uploads/8e5afa13-1a44-4b06-8304-7e03e657e523.png",
+      image: "https://wendelrb.github.io/novo-horizonte-web-79/lovable-uploads/8e5afa13-1a44-4b06-8304-7e03e657e523.png",
       featured: false
     },
     {
@@ -71,7 +71,7 @@ export const UnitsSection = () => {
         { icon: Trees, label: "Jardim terapêutico" },
         { icon: Coffee, label: "Espaço de convivência" }
       ],
-      image: "/lovable-uploads/b1b2a6df-7e0d-4dac-97c8-7e043e8731b4.png",
+      image: "https://wendelrb.github.io/novo-horizonte-web-79/lovable-uploads/b1b2a6df-7e0d-4dac-97c8-7e043e8731b4.png",
       featured: true
     },
     {
@@ -91,7 +91,7 @@ export const UnitsSection = () => {
         { icon: Coffee, label: "Espaço de convivência" },
         { icon: Trees, label: "Área verde terapêutica" }
       ],
-      image: "/lovable-uploads/20c4f196-2286-436a-9333-c5afd6308035.png",
+      image: "https://wendelrb.github.io/novo-horizonte-web-79/lovable-uploads/20c4f196-2286-436a-9333-c5afd6308035.png",
       featured: false
     },
     {
@@ -111,7 +111,7 @@ export const UnitsSection = () => {
         { icon: Car, label: "Fácil acesso" },
         { icon: Coffee, label: "Espaços de convivência" }
       ],
-      image: "/lovable-uploads/2d3f3dcc-2f23-4cb3-86a8-e0290962eb36.png",
+      image: "https://wendelrb.github.io/novo-horizonte-web-79/lovable-uploads/2d3f3dcc-2f23-4cb3-86a8-e0290962eb36.png",
       featured: false
     },
     {
@@ -131,7 +131,7 @@ export const UnitsSection = () => {
         { icon: Trees, label: "Área de lazer" },
         { icon: Car, label: "Estacionamento privativo" }
       ],
-      image: "/lovable-uploads/1c5de89b-bd66-4fc8-8ff7-713b42a04a88.png",
+      image: "https://wendelrb.github.io/novo-horizonte-web-79/lovable-uploads/1c5de89b-bd66-4fc8-8ff7-713b42a04a88.png",
       featured: true
     }
   ];
