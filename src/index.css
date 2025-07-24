@@ -7,6 +7,35 @@ All colors MUST be HSL.
 */
 
 @layer base {
+  /* Mobile optimizations */
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Touch optimizations */
+  button, [role="button"], input[type="submit"], input[type="button"] {
+    touch-action: manipulation;
+  }
+
+  /* Prevent zoom on input focus on iOS */
+  input[type="text"], input[type="email"], input[type="tel"], textarea {
+    font-size: 16px;
+  }
+
+  @media (max-width: 640px) {
+    input[type="text"], input[type="email"], input[type="tel"], textarea {
+      font-size: 16px !important;
+    }
+  }
+
   :root {
     /* Clinic brand colors - soothing and trustworthy */
     --background: 0 0% 100%;

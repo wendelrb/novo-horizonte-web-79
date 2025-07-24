@@ -3,40 +3,41 @@ import { Button } from "@/components/ui/button";
 import { MessageCircle, X } from "lucide-react";
 
 export const WhatsAppFloat = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
 
   useEffect(() => {
-    // Show the button after a delay
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-      // Show tooltip briefly after appearing
-      setTimeout(() => {
-        setShowTooltip(true);
-        // Hide tooltip after 3 seconds
-        setTimeout(() => setShowTooltip(false), 3000);
-      }, 1000);
-    }, 2000);
+    // Show tooltip after 3 seconds, then hide after 3 more seconds
+    const showTimer = setTimeout(() => {
+      setShowTooltip(true);
+      const hideTimer = setTimeout(() => setShowTooltip(false), 3000);
+      return () => clearTimeout(hideTimer);
+    }, 3000);
 
-    return () => clearTimeout(timer);
+    return () => clearTimeout(showTimer);
   }, []);
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "5511999999999"; // Replace with actual clinic number
+    console.log('WhatsApp button clicked!');
+    const phoneNumber = "5519999888"; // Número do WhatsApp da clínica
     const message = "Olá! Gostaria de saber mais sobre os tratamentos da Clínica Novo Horizonte.";
-    const whatsappUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+    // Detecta se é mobile ou desktop para usar o link apropriado
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const whatsappUrl = isMobile 
+      ? `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+      : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+    console.log('Opening WhatsApp URL:', whatsappUrl);
     window.open(whatsappUrl, '_blank');
   };
 
-  if (!isVisible) return null;
+
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
       {/* Tooltip */}
       {showTooltip && (
-        <div className="absolute bottom-full right-0 mb-2 bg-foreground text-background px-4 py-2 rounded-lg shadow-lg whitespace-nowrap animate-fade-in">
+        <div className="absolute bottom-full right-0 mb-2 bg-foreground text-background px-3 py-2 sm:px-4 sm:py-2 rounded-lg shadow-lg whitespace-nowrap animate-fade-in max-w-[200px] sm:max-w-none">
           <div className="flex items-center gap-2">
-            <span className="text-sm font-medium">Fale Conosco</span>
+            <span className="text-xs sm:text-sm font-medium">Fale Conosco</span>
             <Button
               variant="ghost"
               size="sm"
@@ -55,9 +56,10 @@ export const WhatsAppFloat = () => {
         variant="whatsapp"
         size="lg"
         onClick={handleWhatsAppClick}
-        className="w-16 h-16 rounded-full p-0 animate-fade-in hover:animate-pulse"
+        className="w-14 h-14 sm:w-16 sm:h-16 rounded-full p-0 animate-fade-in hover:animate-pulse shadow-lg hover:shadow-xl transition-all duration-300 touch-manipulation"
+        style={{ backgroundColor: '#25D366', color: 'white' }}
       >
-        <MessageCircle className="w-8 h-8" />
+        <MessageCircle className="w-6 h-6 sm:w-8 sm:h-8" />
       </Button>
 
       {/* Ripple Effect */}

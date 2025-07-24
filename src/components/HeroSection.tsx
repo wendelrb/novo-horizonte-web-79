@@ -32,23 +32,23 @@ export const HeroSection = () => {
             </div>
             
             {/* Main Heading */}
-            <h1 className="font-display text-6xl sm:text-7xl lg:text-9xl font-bold text-white mb-6 leading-none tracking-tight">
+            <h1 className="font-display text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-4 sm:mb-6 leading-none tracking-tight">
               <span className="block text-secondary drop-shadow-lg animate-slide-in-left">Novo</span>
               <span className="block drop-shadow-lg animate-slide-in-left" style={{ animationDelay: '0.2s' }}>Horizonte</span>
             </h1>
           </div>
           
           {/* Subtitle */}
-          <div className="mb-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-white/90 mb-6 font-light leading-relaxed text-balance">
+          <div className="mb-6 sm:mb-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white/90 mb-4 sm:mb-6 font-light leading-relaxed text-balance px-4 sm:px-0">
               Tratamento Humanizado e Eficaz em{" "}
-              <span className="text-secondary font-semibold bg-white/10 px-3 py-1 rounded-lg">Porto Alegre</span>
+              <span className="text-secondary font-semibold bg-white/10 px-2 sm:px-3 py-1 rounded-lg">Porto Alegre</span>
             </h2>
           </div>
           
           {/* Description */}
-          <div className="mb-12 animate-scale-in-soft" style={{ animationDelay: '0.6s' }}>
-            <p className="text-lg sm:text-xl text-white/80 max-w-4xl mx-auto leading-relaxed text-balance">
+          <div className="mb-8 sm:mb-12 animate-scale-in-soft" style={{ animationDelay: '0.6s' }}>
+            <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-4xl mx-auto leading-relaxed text-balance px-4 sm:px-6 lg:px-0">
               Equipe multidisciplinar especializada em dependência química e alcoolismo.
               <br className="hidden sm:block" />
               <strong className="text-secondary bg-white/10 px-2 py-1 rounded">15 anos</strong> dedicados à recuperação e reintegração social.
@@ -56,20 +56,20 @@ export const HeroSection = () => {
           </div>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-fade-in-up px-4 sm:px-0" style={{ animationDelay: '0.8s' }}>
             <Button 
               variant="hero" 
               size="lg" 
-              className="min-w-[220px] text-lg py-4 px-8 hover-lift focus-ring"
+              className="w-full sm:min-w-[220px] text-base sm:text-lg py-3 sm:py-4 px-6 sm:px-8 hover-lift focus-ring touch-manipulation"
               onClick={() => scrollToSection('#contact')}
             >
-              <MessageSquare className="w-6 h-6" />
+              <MessageSquare className="w-5 h-5 sm:w-6 sm:h-6" />
               Preciso de ajuda
             </Button>
             <Button 
               variant="soft" 
               size="lg" 
-              className="min-w-[220px] text-lg py-4 px-8 hover-lift focus-ring"
+              className="w-full sm:min-w-[220px] text-base sm:text-lg py-3 sm:py-4 px-6 sm:px-8 hover-lift focus-ring touch-manipulation"
               onClick={() => scrollToSection('#about')}
             >
               Saiba mais sobre nós
